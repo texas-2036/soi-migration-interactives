@@ -1,0 +1,42 @@
+{
+  "name": "migration-article",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://convex-design.github.io/texas-2036-migration",
+  "dependencies": {
+    "d3": "^5.12.0",
+    "react": "^16.11.0",
+    "react-app-polyfill": "^1.0.4",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0",
+    "svg-path-generator": "^1.1.0",
+    "topojson": "^3.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "process-county-data": "node scripts/process-county-outflow && node scripts/process-county-inflow && node scripts/process-county-inflow-previous-years && node scripts/process-county-outflow-previous-years && node scripts/process-county-diffs"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}

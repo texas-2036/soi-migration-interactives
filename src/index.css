@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  background: rgb(245, 245, 245);
+}
+
+.action {
+  text-decoration: underline;
+  /* color: 'blue'; */
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+}
+
+.action:hover {
+  color: 'blue';
+}
+
+.interactive-card {
+  background: #FFFFFF;
+  box-shadow: 5px 10px 1px 1px #CBCCCB;
+  margin: 2em auto;
+  padding: 2em;
+  background: #fff;
+  max-width: 1140px;
+  position: relative;
+}
+
+.logo-watermark {
+  position: absolute;
+  bottom:0;
+  right: 0;
+  /* z-index: inherit; */
+  width: 100px;
+  height: auto;
+}
+
+.county-data-card {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+.county-data-card h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.county-data-card h1 {
+  margin: 3em 0 1.5em 0;
+}
+
+
+.county-data-card > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+select {
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-color:white;
+  background-repeat:no-repeat;
+  background-position: right 10px top 15px;
+  background-size: 16px 16px;
+  color:#000;
+  padding: calc(0.25em - 5px) 0.25em;
+  margin-left: 16px;
+  width:auto;
+  font-family:arial,tahoma;
+  font-size:32px;
+  font-weight:bold;
+  text-align:center;
+  max-width: 100%;
+  /* border-radius:3px;
+  -webkit-border-radius:3px; */
+  -webkit-appearance: none;
+  border:solid 5px black;
+  outline:0;
+  -webkit-transition:0.3s ease all;
+	   -moz-transition:0.3s ease all;
+	    -ms-transition:0.3s ease all;
+	     -o-transition:0.3s ease all;
+	        transition:0.3s ease all;
+}
+
+
+.bar-chart-item {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8em;
+  /* font-size: 0.8em; */
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+.bar-chart-item.selected {
+  /* color: #069FB3; */
+  font-weight: 800;
+}
+.bar-chart-item.selected svg {
+  /* fill: #069FB3; */
+  /* stroke: black; */
+  transform: scale(1, 1.2);
+  transform-origin: center left;
+}
+.bar-chart-item.selected text {
+  /* fill: #069FB3; */
+  /* stroke: black; */
+  transform: scale(1.02);
+  transform-origin: center left;
+}
+
+.state-label {
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  max-width: 720px;
+  margin: 0 auto;
+}
+text {
+  font-weight: 600;
+  /* font-size: 0.8em; */
+  /* text-transform: uppercase; */
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;;
+}
+
+
+h1 {
+  font-weight: 800;
+}
+
+.subhead {
+  font-weight: lighter;
+  max-width: 800px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 auto;
+  color: #696968;
+}
+
+text.number-text {
+  fill: #9E9F9E;
+  font-weight: lighter;
+}
+
+.fade {
+  opacity: 0.7;
+}
+
+.selected .fade {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  .flex {
+    flex-direction: column;
+    grid-gap: 100px;
+  }
+  .action {
+    display: block;
+  }
+
+  .logo-watermark {
+    width: 50px;
+  }
+
+  select {
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  .sankey svg {
+    transform: scale(1.5) translateY(25px);
+  }
+
+  .county-choropleth svg {
+    transform: translateY(-25px);
+  }
+
+  .App {
+    overflow-x: hidden;
+  }
+}
